@@ -1,0 +1,16 @@
+title: Nothing here
+description: 'Yes, it''s true'
+template:
+  repo: nothing-here-template
+  name: nothing-here
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
